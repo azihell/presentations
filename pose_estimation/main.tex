@@ -1,58 +1,67 @@
 \documentclass[10pt]{beamer}
-
 \usetheme[progressbar=frametitle]{metropolis}
-\usepackage{appendixnumberbeamer}
 
+\usepackage{appendixnumberbeamer}
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
-
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
-
 \usepackage{xspace}
+
+
+\graphicspath{ {./images/} }
+
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
 
-\title{Metropolis}
-\subtitle{A modern beamer theme}
+\title{Article review: "3D pose estimation of visual markers"}
+\subtitle{Author: Antonio Badal Regàs}
 % \date{\today}
 \date{}
-\author{Matthias Vogelgesang}
-\institute{Center for modern beamer themes}
+\author{Aziel Martins de Freitas Júnior}
+\institute{SENAI CIMATEC}
 % \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
 
 \begin{document}
 
 \maketitle
 
-\begin{frame}{Table of contents}
+\begin{frame}{Contents}
   \setbeamertemplate{section in toc}[sections numbered]
   \tableofcontents%[hideallsubsections]
 \end{frame}
 
-\section[Intro]{Introduction}
+\section[Introduction]{Introduction}
 
-\begin{frame}[fragile]{Metropolis}
-
-  The \themename theme is a Beamer theme with minimal visual noise
-  inspired by the \href{https://github.com/hsrmbeamertheme/hsrmbeamertheme}{\textsc{hsrm} Beamer
-  Theme} by Benjamin Weiss.
-
-  Enable the theme by loading
-
-  \begin{verbatim}    \documentclass{beamer}
-    \usetheme{metropolis}\end{verbatim}
-
-  Note, that you have to have Mozilla's \emph{Fira Sans} font and XeTeX
-  installed to enjoy this wonderful typography.
+\begin{frame}[fragile]{Motivation}
+  Study arised from the need to understand, analyze and improve a computer vision software based on the ARToolKitPlus software library.
 \end{frame}
-\begin{frame}[fragile]{Sections}
-  Sections group slides of the same topic
 
-  \begin{verbatim}    \section{Elements}\end{verbatim}
+\begin{frame}[fragile]{MBV: Marker-based vision systems}
 
-  for which \themename provides a nice progress indicator \ldots
+  \begin{itemize}
+    \item Dependent on \textbf{fiducial markers};
+    \item \emph{ARtag} are commonly used;
+    \item Tag family for this study was not specified;
+    \item \emph{ARToolKitPlus} system was used because of it's accuracy.
+  \end{itemize}
 
 \end{frame}
+
+\begin{frame}[fragile]{Square and circular ARtags}
+  Cons: squared ARtags have the disadvantages of occlusion and minimum size detection when in comparison.
+
+  Pros: Square have low false negative and very low confusion rate when used in groups.
+
+  \begin{figure}
+    \centering
+    \includegraphics[scale=0.1]{tags}
+    \caption{Examples of tags used by the author.}
+  \end{figure}
+
+\end{frame}
+
+
+
 
 \section{Titleformats}
 
