@@ -369,22 +369,18 @@ based on article: "3D pose estimation of visual markers"}
 
 %----------------------SLIDE 24----------------------%
 
-\begin{frame}[fragile]{Fix 1: error threshold}
-  The iteration error threshold should be turned off so the optimization algorithm does one attempt only;\\
-  \begin{figure}
-    \centering
-    \includegraphics[scale=0.35]{nothreshold.png}
-    \caption{Less position jumps registered.}
-  \end{figure}
-\end{frame}
+\section{Conclusion - proposed solution}
 
-\begin{frame}[fragile]{Fix 2: limit iteration space}
+%----------------------SLIDE 25----------------------%
+
+\begin{frame}[fragile]{Actions taken}
+  The iteration error threshold should be turned off so the optimization algorithm does one more attempt at getting small error values;\\
   Iteration algorithm attempts 30 sweeps of 15$^{\circ}$;\\
-  Reduction to sweeps of 5$^{\circ}$;\\
+  Reduction to sweeps of 5$^{\circ}$.\\
   \begin{figure}
     \centering
-    \includegraphics[scale=0.35]{no-jumps}
-    \caption{No position jump. Result of both fixes.}
+    \includegraphics[scale=0.35]{no-jumps.png}
+    \caption{No position jumps registered.}
   \end{figure}
 \end{frame}
 
